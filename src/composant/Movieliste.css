@@ -1,0 +1,44 @@
+.liste{
+   
+    border-radius: 10px;
+  
+    background: linear-gradient(138deg, rgba(233,254,251,1) 0%, rgba(204,197,197,1) 100%);
+   
+    overflow: hidden;
+    display: flex;
+justify-content: space-between;
+flex-direction: column;
+/* border: 2px solid  black ; */
+height: 400px;
+width:250px;
+margin-bottom: 30px;
+margin-right: 20px;
+    }
+.image{
+    width:250px;
+    height:300px;
+    /* border: 2px solid black; */
+   
+      
+    }
+    .list{
+        
+display: flex;
+flex-wrap: wrap; 
+padding-left: 130px;
+padding-right: 130px;
+margin-top: 50px; }
+    .button{
+        margin-left: 50px;
+
+        width:216px;
+        height:258px;
+        font-size: 120px;
+  
+    }
+    .movieRating
+{
+
+color:gold;
+
+}
