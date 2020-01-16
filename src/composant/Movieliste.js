@@ -1,7 +1,9 @@
 import React from 'react'
 import './Movieliste.css'
+import Loader from '../HOC/Loader'
 
-export default function Movieliste(props) {
+
+function Movieliste(props) {
 
     const Rating = (count) => {
         let stars = []
@@ -55,3 +57,5 @@ export default function Movieliste(props) {
         </div>
     )
 }
+export  default  Loader(Movieliste)
+

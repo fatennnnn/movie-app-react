@@ -7,11 +7,14 @@ import Buttonadd from './composantbtn/Buttonadd'
 import './App.css';
 import Searchname from './rechercherate/Searchname';
 import Search from './recherche/Search';
+import Loader from './HOC/Loader'
 
 
 export default class App extends Component {
   state={filters:"",
   rate:0,
+  //for movie spinner
+  loading: true,
     movie:[
     {   movieimage:"https://doostihaa.com/img/uploads/2013/12/The-Lion-King-1994.jpg",
        moviename:"Sinba",
@@ -49,6 +52,10 @@ export default class App extends Component {
   Handlehangerate=(rated)=>{
     this.setState({ rate:rated})
   }
+  // composant for 
+  componentDidMount=()=>{
+    setTimeout(()=>{this.setState({loading:false} ) },2000)
+  }
   render() {
     return (
       <div className="tot">
@@ -60,8 +67,7 @@ export default class App extends Component {
 </div>
 
       <div>
-        
-        <Movieliste movieListes={this.state.movie} fil={this.state.filters} ra={this.state.rate}/>
+        <Movieliste movieListes={this.state.movie} fil={this.state.filters} ra={this.state.rate} loading={this.state.loading}/>
         <button className="addButt" onClick={this.showModal}>+</button>
         <Buttonadd addmo={this.addmovie} show={this.state.show} hide={this.hideModal}/>
       </div>
